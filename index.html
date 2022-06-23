@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Cancer Tumor Classification</title>
+        <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet'>
+        <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css')}}">
+    </head>
+    <body>
+        <div class="login">
+            
+         <div style="color:rgb(199, 200, 205)">
+            <h1>Cancer Type Classification</h1>
+            <form action="{{url_for('predict')}}"method="post">
+                <input type="text" name="radius_mean" placeholder="Radius_mean:" rows="4" cols="50" required="required"><br><br>
+                <input type="text" name="texture_mean" placeholder="Texture_mean:"  rows="4" cols="50" required="required"><br><br>
+                <input type="text" name="perimeter_mean" placeholder="Perimeter_mean:" rows="4" cols="50" required="required"><br><br>
+                <input type="text" name="area_mean" placeholder="Area_mean:"  rows="4" cols="50" required="required"><br><br>
+                <input type="text" name="smoothness_mean" placeholder="Smoothness_mean:"  rows="4" cols="50" required="required"><br><br>
+                <input type="text" name="compactness_mean" placeholder="Compactness_mean:"  rows="4" cols="50" required="required"><br><br>
+                <input type="text" name="concavity_mean" placeholder="Concavity_mean:"  rows="4" cols="50" required="required"><br><br>
+                <input type="text" name="concave_points_mean" placeholder="Concave points_mean:" rows="4" cols="50"  required="required"><br><br>
+                <input type="text" name="symmetry_mean" placeholder="Symmetry_mean:"  rows="4" cols="50" required="required"><br><br>
+                <input type="text" name="fractal_dimension_mean" placeholder="Fractal_dimension_mean:"  rows="4" cols="50" required="required"><br><br>
+                <input type="text" name="radius_se" placeholder="Radius_se:" required="required"><br><br>
+                <input type="text" name="texture_se" placeholder="Texture_se:" required="required"><br><br>
+                <input type="text" name="perimeter_se" placeholder="Perimeter_se:" required="required"><br><br>
+                <input type="text" name="area_se" placeholder="Area_se:" required="required"><br><br>
+                <input type="text" name="smoothness_se" placeholder="Smoothness_se:" required="required"><br><br>
+                <input type="text" name="compactness_se" placeholder="Compactness_se:" required="required"><br><br>
+                <input type="text" name="concavity_se" placeholder="Concavity_se:" required="required"><br><br>
+                <input type="text" name="concave_points_se" placeholder="Concave points_se:" required="required"><br><br>
+                <input type="text" name="symmetry_se" placeholder="Symmetry_se:" required="required"><br><br>
+                <input type="text" name="fractal_dimension_se" placeholder="Fractal_dimension_se:'," required="required"><br><br>
+                <input type="text" name="radius_worst" placeholder="Radius_worst:" required="required"><br><br>
+                <input type="text" name="texture_worst" placeholder="Texture_worst:" required="required"><br><br>
+                <input type="text" name="perimeter_worst" placeholder="Perimeter_worst:" required="required"><br><br>
+                <input type="text" name="area_worst" placeholder="Area_worst:" required="required"><br><br>
+                <input type="text" name="smoothness_worst" placeholder="Smoothness_worst:" required="required"><br><br>
+                <input type="text" name="compactness_worst" placeholder="Compactness_worst:" required="required"><br><br>
+                <input type="text" name="concavity_worst" placeholder="Concavity_worst:" required="required"><br><br>
+                <input type="text" name="concave_points_worst" placeholder="Concave_points_worst:" required="required"><br><br>
+                <input type="text" name="symmetry_worst" placeholder="Symmetry_worst:" required="required"><br><br>
+                <input type="text" name="fractal_dimension_worst" placeholder="Fractal_dimension_worst:" required="required"><br><br>
+                <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button><br><br>
+            </form>
+            <br>
+            <br>
+            {{prediction_text}}
+        </div>
+        </div>
+
+<style>
+    body {
+        background-image: url('0x0.jpeg');
+        text-align: center;
+        padding: 0px;
+    }
+    
+    #research {
+        font-size: 20px;
+        width: 200px;
+        height: 28px;
+        top: 28px;
+    }
+    #first {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #second {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #third {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #fourth {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+</style>
+</body>
+</html>
